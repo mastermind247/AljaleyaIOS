@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60BCB9E21EDFF3C900E91ACA /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BCB9E11EDFF3C900E91ACA /* ContentViewController.swift */; };
+		60BCB9E41EDFF48B00E91ACA /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BCB9E31EDFF48B00E91ACA /* MenuTableViewController.swift */; };
+		A59614A0A50B1AA82B094702 /* Pods_AljaleyaiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FA47B0B363AC0953CDF3E5 /* Pods_AljaleyaiOS.framework */; };
 		D5AC037C1ED071F100A603D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC037B1ED071F100A603D6 /* AppDelegate.swift */; };
 		D5AC037E1ED071F100A603D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC037D1ED071F100A603D6 /* ViewController.swift */; };
 		D5AC03811ED071F100A603D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AC037F1ED071F100A603D6 /* Main.storyboard */; };
@@ -15,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		198BE40712D8F7865E649696 /* Pods-AljaleyaiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AljaleyaiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AljaleyaiOS/Pods-AljaleyaiOS.release.xcconfig"; sourceTree = "<group>"; };
+		40FA47B0B363AC0953CDF3E5 /* Pods_AljaleyaiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AljaleyaiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60BCB9E11EDFF3C900E91ACA /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		60BCB9E31EDFF48B00E91ACA /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		7A415D6665B25C31AE8147C5 /* Pods-AljaleyaiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AljaleyaiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AljaleyaiOS/Pods-AljaleyaiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D5AC03781ED071F100A603D6 /* AljaleyaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AljaleyaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AC037B1ED071F100A603D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5AC037D1ED071F100A603D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59614A0A50B1AA82B094702 /* Pods_AljaleyaiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7469C8C27EAC09355BAED468 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A415D6665B25C31AE8147C5 /* Pods-AljaleyaiOS.debug.xcconfig */,
+				198BE40712D8F7865E649696 /* Pods-AljaleyaiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D5AC036F1ED071F100A603D6 = {
 			isa = PBXGroup;
 			children = (
 				D5AC037A1ED071F100A603D6 /* AljaleyaiOS */,
 				D5AC03791ED071F100A603D6 /* Products */,
+				7469C8C27EAC09355BAED468 /* Pods */,
+				FAC50868CD8C148AEC6E2D2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +76,22 @@
 			children = (
 				D5AC037B1ED071F100A603D6 /* AppDelegate.swift */,
 				D5AC037D1ED071F100A603D6 /* ViewController.swift */,
+				60BCB9E31EDFF48B00E91ACA /* MenuTableViewController.swift */,
+				60BCB9E11EDFF3C900E91ACA /* ContentViewController.swift */,
 				D5AC037F1ED071F100A603D6 /* Main.storyboard */,
 				D5AC03821ED071F100A603D6 /* Assets.xcassets */,
 				D5AC03841ED071F100A603D6 /* LaunchScreen.storyboard */,
 				D5AC03871ED071F100A603D6 /* Info.plist */,
 			);
 			path = AljaleyaiOS;
+			sourceTree = "<group>";
+		};
+		FAC50868CD8C148AEC6E2D2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40FA47B0B363AC0953CDF3E5 /* Pods_AljaleyaiOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5AC038A1ED071F100A603D6 /* Build configuration list for PBXNativeTarget "AljaleyaiOS" */;
 			buildPhases = (
+				3DD5A3D0C773C037EE3C0310 /* [CP] Check Pods Manifest.lock */,
 				D5AC03741ED071F100A603D6 /* Sources */,
 				D5AC03751ED071F100A603D6 /* Frameworks */,
 				D5AC03761ED071F100A603D6 /* Resources */,
+				8707D29C26F03B54921064FC /* [CP] Embed Pods Frameworks */,
+				9E25B4ACF95442CE04E04EDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +164,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DD5A3D0C773C037EE3C0310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8707D29C26F03B54921064FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AljaleyaiOS/Pods-AljaleyaiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E25B4ACF95442CE04E04EDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AljaleyaiOS/Pods-AljaleyaiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5AC03741ED071F100A603D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BCB9E41EDFF48B00E91ACA /* MenuTableViewController.swift in Sources */,
+				60BCB9E21EDFF3C900E91ACA /* ContentViewController.swift in Sources */,
 				D5AC037E1ED071F100A603D6 /* ViewController.swift in Sources */,
 				D5AC037C1ED071F100A603D6 /* AppDelegate.swift in Sources */,
 			);
@@ -260,7 +343,9 @@
 		};
 		D5AC038B1ED071F100A603D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A415D6665B25C31AE8147C5 /* Pods-AljaleyaiOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AljaleyaiOS/Info.plist;
@@ -275,7 +360,9 @@
 		};
 		D5AC038C1ED071F100A603D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198BE40712D8F7865E649696 /* Pods-AljaleyaiOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 76VN2497YU;

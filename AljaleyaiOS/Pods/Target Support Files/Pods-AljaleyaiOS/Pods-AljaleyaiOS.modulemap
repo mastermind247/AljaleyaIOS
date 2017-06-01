@@ -1,0 +1,6 @@
+framework module Pods_AljaleyaiOS {
+  umbrella header "Pods-AljaleyaiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
