@@ -8,10 +8,11 @@
 
 import UIKit
 import SafariServices
+import MessageUI
 
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
 
-    private let menuItems = ["Home", "About Us"]
+    private let menuItems = ["Home", "About Us", "Contact Us"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,10 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             dismiss(animated: true, completion: nil)
-        } else {
+        } else if indexPath.row == 1 {
             openSafariViewController(with: "http://aljaleya.tv")
+        } else {
+            openMailComposer()
         }
     }
 
@@ -55,5 +58,22 @@ class MenuTableViewController: UITableViewController {
             let controller = SFSafariViewController(url: safeUrl, entersReaderIfAvailable: true)
             present(controller, animated: true, completion: nil)
         }
+    }
+
+    func openMailComposer() {
+        if !MFMailComposeViewController.canSendMail() {
+            print("Mail services are not available")
+            return
+        }
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        composeVC.setToRecipients(["info@aljaleya.ca"])
+        composeVC.setSubject("Contact Support - iOS")
+        composeVC.setMessageBody("", isHTML: false)
+        self.present(composeVC, animated: true, completion: nil)
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

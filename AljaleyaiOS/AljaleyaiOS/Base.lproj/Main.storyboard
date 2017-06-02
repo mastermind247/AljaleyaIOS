@@ -13,16 +13,16 @@
         <scene sceneID="SjH-xy-5WU">
             <objects>
                 <tableViewController id="ztc-l0-M6r" customClass="MenuTableViewController" customModule="AljaleyaiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MOM-tl-d6c">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="MOM-tl-d6c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="abk-OV-bbd">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="abk-OV-bbd">
+                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abk-OV-bbd" id="V8K-xX-byb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -36,7 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SU9-S7-VGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="-139"/>
+            <point key="canvasLocation" x="556.52173913043487" y="-139.4021739130435"/>
         </scene>
         <!--AljaleyaTV-->
         <scene sceneID="Fel-4V-eV6">
@@ -64,35 +64,48 @@
                                     <action selector="playAction:" destination="Mul-QY-fA4" eventType="touchUpInside" id="Nkf-w9-nRb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gbm-DK-JLq">
-                                <rect key="frame" x="53" y="251" width="308" height="184"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbm-DK-JLq">
+                                <rect key="frame" x="33" y="243" width="348" height="250"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="kSj-Ib-4sq">
-                                        <rect key="frame" x="0.0" y="0.0" width="308" height="118"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="kSj-Ib-4sq">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="196"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="TagLine" translatesAutoresizingMaskIntoConstraints="NO" id="DBq-Pp-Psd">
-                                        <rect key="frame" x="0.0" y="126" width="308" height="38"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="TagLine" translatesAutoresizingMaskIntoConstraints="NO" id="DBq-Pp-Psd">
+                                        <rect key="frame" x="0.0" y="204" width="348" height="38"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kSj-Ib-4sq" firstAttribute="leading" secondItem="Gbm-DK-JLq" secondAttribute="leading" id="1YL-L4-Xdr"/>
+                                    <constraint firstItem="DBq-Pp-Psd" firstAttribute="top" secondItem="kSj-Ib-4sq" secondAttribute="bottom" constant="8" id="Cp6-uE-otU"/>
+                                    <constraint firstItem="kSj-Ib-4sq" firstAttribute="top" secondItem="Gbm-DK-JLq" secondAttribute="top" id="Hz6-wA-hbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="DBq-Pp-Psd" secondAttribute="trailing" id="Org-bC-k4Q"/>
+                                    <constraint firstItem="kSj-Ib-4sq" firstAttribute="centerX" secondItem="Gbm-DK-JLq" secondAttribute="centerX" id="UVD-WE-ceC"/>
+                                    <constraint firstAttribute="trailing" secondItem="kSj-Ib-4sq" secondAttribute="trailing" id="ZEl-p7-ptV"/>
+                                    <constraint firstAttribute="bottom" secondItem="kSj-Ib-4sq" secondAttribute="bottom" constant="54" id="bKG-y1-Xme"/>
+                                    <constraint firstItem="DBq-Pp-Psd" firstAttribute="centerX" secondItem="Gbm-DK-JLq" secondAttribute="centerX" id="pAO-1B-TNl"/>
+                                    <constraint firstItem="DBq-Pp-Psd" firstAttribute="leading" secondItem="Gbm-DK-JLq" secondAttribute="leading" id="xXa-ng-HUB"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Gbm-DK-JLq" firstAttribute="leading" secondItem="2aq-4b-ZbQ" secondAttribute="leading" constant="33" id="2RD-P9-wef"/>
                             <constraint firstAttribute="trailing" secondItem="2c8-HS-VCq" secondAttribute="trailing" id="GEP-EX-Q7w"/>
                             <constraint firstItem="FPB-iy-5a9" firstAttribute="top" secondItem="HVC-x6-HSe" secondAttribute="bottom" constant="20" id="ULJ-tA-djI"/>
+                            <constraint firstItem="Gbm-DK-JLq" firstAttribute="centerY" secondItem="2aq-4b-ZbQ" secondAttribute="centerY" id="ckF-gt-lmY"/>
+                            <constraint firstItem="Gbm-DK-JLq" firstAttribute="top" relation="lessThanOrEqual" secondItem="J5M-Xz-2uc" secondAttribute="bottom" constant="212" id="d48-HN-8gR"/>
                             <constraint firstItem="2c8-HS-VCq" firstAttribute="leading" secondItem="2aq-4b-ZbQ" secondAttribute="leading" id="esU-JM-bQp"/>
                             <constraint firstItem="HVC-x6-HSe" firstAttribute="centerX" secondItem="2aq-4b-ZbQ" secondAttribute="centerX" id="m3j-cA-ve6"/>
                             <constraint firstItem="FPB-iy-5a9" firstAttribute="top" secondItem="2c8-HS-VCq" secondAttribute="bottom" id="nC6-B9-6A7"/>
+                            <constraint firstAttribute="trailing" secondItem="Gbm-DK-JLq" secondAttribute="trailing" constant="33" id="oSE-OL-wwa"/>
+                            <constraint firstItem="Gbm-DK-JLq" firstAttribute="centerX" secondItem="2aq-4b-ZbQ" secondAttribute="centerX" id="qS4-3q-SmX"/>
                             <constraint firstItem="2c8-HS-VCq" firstAttribute="top" secondItem="J5M-Xz-2uc" secondAttribute="bottom" constant="-64" id="ydK-Tw-Twy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AljaleyaTV" id="Uyg-Ju-X51">
                         <barButtonItem key="leftBarButtonItem" image="img_menu" id="u83-vg-0tb">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <connections>
                                 <segue destination="d9t-kk-NF5" kind="presentation" id="zyw-Lh-uyo"/>
                             </connections>
@@ -127,9 +140,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nrH-g3-I23" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a8M-hv-0OU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="a8M-hv-0OU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24426067379663557" green="0.26361467581925735" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
