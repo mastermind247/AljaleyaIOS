@@ -129,7 +129,7 @@
 				TargetAttributes = {
 					D5AC03771ED071F100A603D6 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = G34KQT9TPD;
+						DevelopmentTeam = 76VN2497YU;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -348,14 +348,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G34KQT9TPD;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 76VN2497YU;
 				INFOPLIST_FILE = AljaleyaiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aljayela.aljayelatv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "104d97bf-f95f-4530-a64b-745d8d20ffb3";
-				PROVISIONING_PROFILE_SPECIFIER = "SA Star";
+				PROVISIONING_PROFILE = "5d3daaa0-d6ae-4a0f-95c9-7a45d14146c5";
+				PROVISIONING_PROFILE_SPECIFIER = "Aljaleya iOS Disto";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
